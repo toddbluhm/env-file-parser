@@ -1,0 +1,37 @@
+{
+  "name": "env-file-parser",
+  "version": "0.0.1",
+  "description": "Custom env file recursive descent parser",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-cover": "istanbul cover node_modules/.bin/_mocha -- -R spec",
+    "test-lint": "standard",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "lint": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/toddbluhm/env-file-parser.git"
+  },
+  "keywords": [
+    "env",
+    "file",
+    "parser"
+  ],
+  "author": "Todd Bluhm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toddbluhm/env-file-parser/issues"
+  },
+  "homepage": "https://github.com/toddbluhm/env-file-parser#readme",
+  "devDependencies": {
+    "better-assert": "^1.0.2",
+    "coveralls": "^2.11.12",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.0.2",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.5",
+    "standard": "^8.6.0"
+  }
+}

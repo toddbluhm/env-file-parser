@@ -1,0 +1,28 @@
+sudo: required
+dist: trusty
+
+language: node_js
+node_js:
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+
+env:
+  global:
+    - COVERALLS_REPO_TOKEN=FHelz8Bogm6Oh0RMjfitZiEHX9y4dMw5p
+    - COVERALLS_PARALLEL=true
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm run lint
+  - npm run test-cover
+
+after_script:
+  - npm run coveralls
+
+notifications:
+  webhooks: https://coveralls.io/webhook?repo_token=COVERALLS_REPO_TOKEN

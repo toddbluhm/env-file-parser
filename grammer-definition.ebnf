@@ -1,6 +1,6 @@
-identifier = character, { character } ;
+identifier = { character } ;
 value = character, { character | white space }, character ;
-quoted value = '"', { value | "#" | '"' }, '"' ;
+quoted value = '"', { value | "#" | '"' | " " }, '"' ;
 assignment = identifier, ( "=" | white space ), ( value | quoted value ) ;
 comment = "#", { character | white space }, terminator ;
 statement = assignment, ( [ white space ], comment | terminator ) ;
